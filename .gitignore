@@ -1,0 +1,5 @@
+*.pdb
+!proj.win32/Debug.win32/*.exe
+!proj.win32/Debug.win32/*.lib
+!proj.win32/Debug.win32/*.dll
+!proj.win32/Debug.win32/*.ilk

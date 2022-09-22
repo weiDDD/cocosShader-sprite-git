@@ -1,0 +1,403 @@
+spine_norsoldier#0.webp
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+b0001
+  rotate: true
+  xy: 245, 154
+  size: 90, 89
+  orig: 90, 90
+  offset: 0, 1
+  index: -1
+b0002
+  rotate: false
+  xy: 1, 442
+  size: 85, 68
+  orig: 90, 90
+  offset: 5, 1
+  index: -1
+b0003
+  rotate: true
+  xy: 387, 1
+  size: 74, 40
+  orig: 90, 90
+  offset: 16, 1
+  index: -1
+c0001
+  rotate: true
+  xy: 296, 1
+  size: 90, 89
+  orig: 90, 90
+  offset: 0, 1
+  index: -1
+c0002
+  rotate: false
+  xy: 88, 442
+  size: 85, 68
+  orig: 90, 90
+  offset: 0, 1
+  index: -1
+c0003
+  rotate: true
+  xy: 406, 77
+  size: 74, 40
+  orig: 90, 90
+  offset: 0, 1
+  index: -1
+norsoldier_dead_1
+  rotate: false
+  xy: 243, 425
+  size: 100, 86
+  orig: 150, 130
+  offset: 24, 15
+  index: -1
+norsoldier_dead_10
+  rotate: true
+  xy: 131, 304
+  size: 124, 54
+  orig: 150, 130
+  offset: 10, 4
+  index: -1
+norsoldier_dead_11
+  rotate: true
+  xy: 189, 154
+  size: 107, 54
+  orig: 150, 130
+  offset: 10, 4
+  index: -1
+norsoldier_dead_3
+  rotate: true
+  xy: 202, 1
+  size: 94, 92
+  orig: 150, 130
+  offset: 45, 9
+  index: -1
+norsoldier_dead_5
+  rotate: false
+  xy: 249, 303
+  size: 83, 89
+  orig: 150, 130
+  offset: 34, 7
+  index: -1
+norsoldier_dead_7
+  rotate: true
+  xy: 140, 1
+  size: 118, 60
+  orig: 150, 130
+  offset: 12, 7
+  index: -1
+norsoldier_dead_8
+  rotate: true
+  xy: 187, 303
+  size: 120, 60
+  orig: 150, 130
+  offset: 12, 7
+  index: -1
+norsoldier_dead_9
+  rotate: true
+  xy: 133, 154
+  size: 123, 54
+  orig: 150, 130
+  offset: 10, 4
+  index: -1
+norsoldier_g_1
+  rotate: false
+  xy: 1, 304
+  size: 128, 136
+  orig: 171, 184
+  offset: 14, 34
+  index: -1
+norsoldier_g_2
+  rotate: false
+  xy: 1, 154
+  size: 130, 148
+  orig: 171, 184
+  offset: 8, 27
+  index: -1
+norsoldier_g_3
+  rotate: false
+  xy: 1, 1
+  size: 137, 151
+  orig: 171, 184
+  offset: 5, 29
+  index: -1
+norsoldier_shock_1
+  rotate: false
+  xy: 336, 154
+  size: 74, 83
+  orig: 83, 90
+  offset: 4, 3
+  index: -1
+norsoldier_shock_2
+  rotate: false
+  xy: 175, 430
+  size: 66, 80
+  orig: 83, 90
+  offset: 9, 5
+  index: -1
+shadow
+  rotate: false
+  xy: 140, 121
+  size: 49, 31
+  orig: 49, 31
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_body
+  rotate: true
+  xy: 205, 263
+  size: 38, 36
+  orig: 38, 36
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_tou
+  rotate: false
+  xy: 213, 97
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_yao
+  rotate: true
+  xy: 293, 263
+  size: 37, 20
+  orig: 37, 20
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_yjiao
+  rotate: true
+  xy: 286, 246
+  size: 15, 11
+  orig: 15, 11
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_ysb
+  rotate: true
+  xy: 269, 394
+  size: 21, 44
+  orig: 21, 44
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_yshou
+  rotate: false
+  xy: 189, 263
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_ytui
+  rotate: false
+  xy: 266, 246
+  size: 18, 15
+  orig: 18, 15
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_zjiao
+  rotate: false
+  xy: 429, 19
+  size: 16, 11
+  orig: 16, 15
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_zsb
+  rotate: true
+  xy: 315, 394
+  size: 21, 40
+  orig: 21, 40
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_zshou
+  rotate: true
+  xy: 183, 279
+  size: 22, 20
+  orig: 22, 20
+  offset: 0, 0
+  index: -1
+spine_norsoldier_b_ztui
+  rotate: false
+  xy: 429, 1
+  size: 17, 16
+  orig: 17, 16
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_bady
+  rotate: false
+  xy: 191, 121
+  size: 20, 29
+  orig: 20, 29
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_bady1
+  rotate: false
+  xy: 448, 114
+  size: 35, 33
+  orig: 39, 37
+  offset: 2, 2
+  index: -1
+spine_norsoldier_c_tou
+  rotate: false
+  xy: 333, 93
+  size: 51, 59
+  orig: 51, 59
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_tou1
+  rotate: true
+  xy: 315, 246
+  size: 53, 62
+  orig: 68, 76
+  offset: 9, 6
+  index: -1
+spine_norsoldier_c_yao
+  rotate: true
+  xy: 160, 279
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_yjiao
+  rotate: false
+  xy: 448, 149
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_ysb
+  rotate: false
+  xy: 249, 394
+  size: 18, 29
+  orig: 18, 29
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_ysb1
+  rotate: false
+  xy: 466, 40
+  size: 42, 35
+  orig: 44, 38
+  offset: 1, 1
+  index: -1
+spine_norsoldier_c_yshou
+  rotate: false
+  xy: 466, 149
+  size: 13, 12
+  orig: 13, 12
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_ytui
+  rotate: true
+  xy: 245, 246
+  size: 15, 19
+  orig: 15, 19
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_zjiao
+  rotate: false
+  xy: 448, 149
+  size: 16, 11
+  orig: 16, 11
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_zsb
+  rotate: false
+  xy: 243, 263
+  size: 25, 38
+  orig: 25, 38
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_zshou
+  rotate: true
+  xy: 386, 93
+  size: 52, 18
+  orig: 52, 18
+  offset: 0, 0
+  index: -1
+spine_norsoldier_c_zshou1
+  rotate: true
+  xy: 429, 39
+  size: 36, 35
+  orig: 43, 42
+  offset: 4, 2
+  index: -1
+spine_norsoldier_c_ztui
+  rotate: true
+  xy: 245, 246
+  size: 15, 19
+  orig: 15, 19
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_bady
+  rotate: false
+  xy: 448, 77
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_tou
+  rotate: true
+  xy: 270, 97
+  size: 54, 61
+  orig: 54, 61
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_yao
+  rotate: true
+  xy: 493, 1
+  size: 37, 18
+  orig: 37, 18
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_yjiao
+  rotate: true
+  xy: 133, 279
+  size: 23, 25
+  orig: 23, 25
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_ysb
+  rotate: false
+  xy: 270, 263
+  size: 21, 37
+  orig: 21, 37
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_yshou
+  rotate: false
+  xy: 448, 1
+  size: 43, 36
+  orig: 43, 36
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_ytui
+  rotate: false
+  xy: 485, 118
+  size: 20, 19
+  orig: 20, 19
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_zdt
+  rotate: true
+  xy: 485, 139
+  size: 18, 20
+  orig: 18, 20
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_zjiao
+  rotate: false
+  xy: 387, 77
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_zsb
+  rotate: false
+  xy: 489, 77
+  size: 21, 39
+  orig: 21, 39
+  offset: 0, 0
+  index: -1
+spine_norsoldier_z_zshou
+  rotate: true
+  xy: 299, 246
+  size: 14, 12
+  orig: 14, 12
+  offset: 0, 0
+  index: -1
