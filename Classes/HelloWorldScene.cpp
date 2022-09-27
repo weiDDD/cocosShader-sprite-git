@@ -24,6 +24,78 @@ bool HelloWorld::init()
 
 	setTime = 1;
 	setTimeCount = 0;
+	SHL = Vec3(243,0.1,0.1);
+	sSprite = nullptr;
+	soldier = nullptr;
+	/////light shader
+	lightHeight = 0;
+	lightWidth = 0;
+	lightStart = 0;
+	lightHeight2 = 0;
+	lightWidth2 = 0;
+	lightStart2 = 0;
+	lightHeight3 = 0;
+	lightWidth3 = 0;
+	lightStart3 = 0;
+	/////flash shader
+	flashFirstWidth = 0;
+	flashStartHeight = 0;
+	flashFirstHeight = 0;
+	/////vortex shader
+	vortexRadius = 0;
+	vortexAngle = 0;
+	////drawEdge sahder
+	outLineSize = 0;
+	outLineColor = Vec3(0, 0, 0);
+	circleLightAngle = 0;
+	////water shader
+	waterTime = 0;
+	waterResolution = Vec2(0, 0);
+	////wire shader
+	wireDurationNum1 = 0;
+	wireDurationNum2 = 0;
+	wireDurationNum3 = 0;
+	startAngle1 = 0;
+	startAngle2 = 0;
+	startAngle3 = 0;
+	wireStartHeight1 = 0;
+	wireStartHeight2 = 0; 
+	wireStartHeight3 = 0;
+	wireHeight1 = 0;
+	wireHeight2 = 0;
+	wireHeight3 = 0;
+	wireSize1 = 0;
+	wireSize2 = 0;
+	wireSize3 = 0;
+	/////godLight shader
+	u_time = 0;
+	u_num_sample = 0;   //上帝之光，一个点距离光源点的距离上分为多少份，并叠加这些像素颜色
+	u_weight = 0;     //叠加的颜色需要乘以一个  比例，不然就会很亮
+	/////mask shader
+	radius = 0;
+	center = Vec2(0,0); 
+	centerColor = Vec4(0, 0,0,0);
+	maskColor = Vec4(0, 0,0,0); 
+
+	///
+	m_rippleDistance = 0;
+	m_rippleRange = 0;
+
+	/////////////////////////////////// touch Water data
+    //std::vector<TouchWaterPoint> touchWaterPointData;  // 触摸数据
+	//Rect waterSpriteRect;  
+
+	waterSpeed = 300;    // 水波的传播速度 px
+	waterRange = 40;    // 水波的影响范围 px
+
+	maxTouchPointNum = 50;
+
+	isTouchWater = false;
+	nowTouchWaterPos;
+	touchWaterTimeDelay = 0.1;
+	touchWaterTimeDelayCount = 0;
+
+	alpha = 1;
 
 	//////////////////////////////
 	// 1. super init first
@@ -147,7 +219,7 @@ bool HelloWorld::init()
 	Size listSize = Size(200, 40);
 	initLabel->setDimensions(listSize);
 	DropDownList* destBlend = DropDownList::create(initLabel, listSize);
-	destBlend->setPosition(visibleSize.width - listSize.width - 20, visibleSize.height - 2 * listSize.height);
+	destBlend->setPosition(visibleSize.width - listSize.width - 20, visibleSize.height - 1 * listSize.height);
 	this->addChild(destBlend);
 
 	///一个名字的vector
@@ -170,7 +242,9 @@ bool HelloWorld::init()
 	shaderNames.push_back("whiteBar");
 	shaderNames.push_back("floatVecTest");
 	shaderNames.push_back("touchWaterRipple");
-	
+	shaderNames.push_back("randomHide");
+	shaderNames.push_back("mosaic");
+	shaderNames.push_back("mosaic_spine");
 
 	std::vector<std::string>::iterator itor = shaderNames.begin();
 	while (itor != shaderNames.end()){
@@ -427,8 +501,41 @@ void HelloWorld::onDropDownList(Object* list, DropDownList* sender){
 		waterSpriteRect = Rect(sSprite->getPositionX() - sSprite->getContentSize().width / 2 * sSprite->getScaleX(), sSprite->getPositionY() - sSprite->getContentSize().height / 2 * sSprite->getScaleY(),
 									sSprite->getContentSize().width * sSprite->getScaleX(), sSprite->getContentSize().height * sSprite->getScaleY());
 	}
-	
+	else if (nowName == "randomHide") {
+		//auto bg = ShaderSprite::create("panda.png");
+		//bg->setPosition(600, 500);
+		//this->addChild(bg, -1);
 
+		sSprite = ShaderSprite::create("soldier.png");
+		sSprite->setPosition(600, 500);
+		this->addChild(sSprite, -1);
+		sSprite->setScale(2);
+		////加载shader文件
+		sSprite->setShaderFile("randomHide.vsh", "randomHide.fsh");
+		sSprite->setSecondTex("mask_10.png");
+	}
+	else if (nowName == "mosaic") {
+		sSprite = ShaderSprite::create("man.png");
+		sSprite->setPosition(600, 500);
+		this->addChild(sSprite, -1);
+		sSprite->setScale(2);
+		////加载shader文件
+		sSprite->setShaderFile("mosaic.vsh", "mosaic.fsh");
+
+		sSprite->setIntArg("offset", int(CCRANDOM_0_1() * 100) );
+	}
+	else if (nowName == "mosaic_spine") {
+		soldier = SkeletonAnimation::createWithFile("norsoldier/spine_norsoldier.json", "norsoldier/spine_norsoldier.atlas", 1);
+		soldier->setAnimation(0, "norsoldier_walk_left", true);
+		soldier->setPosition(500, 300);
+		this->addChild(soldier);
+
+		GLProgram* glprogram = GLProgram::createWithFilenames("mosaic.vsh", "mosaic.fsh");
+		soldier->setShaderProgram(glprogram);
+
+		soldier->getGLProgramState()->setUniformInt("offset", int(CCRANDOM_0_1() * 100) );
+	}
+	
 }
 
 void HelloWorld::update(float dt){
@@ -640,7 +747,9 @@ void HelloWorld::update(float dt){
 				//}
 			}
 		}
-
+	}
+	else if (nowShaderName == "randomHide") {
+		sSprite->setFloatArg("alpha", alpha);
 	}
 	
 	//////参数更新---------------------------------------------
@@ -694,6 +803,11 @@ void HelloWorld::update(float dt){
 	centerColor = Vec4(1, 1, 1, 0);
 	maskColor = Vec4(0, 0, 0, 0);
 	//
+
+	alpha -= dt/2;
+	if(alpha < 0){
+		alpha = 1.0;
+	}
 
 }
 

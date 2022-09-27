@@ -48,84 +48,87 @@ public:
 private:
 	std::string nowShaderName;
 	std::vector<std::string> shaderNames;
-	ShaderSprite* sSprite = nullptr;
-	spine::SkeletonAnimation *soldier = nullptr;
+	ShaderSprite* sSprite ;
+	spine::SkeletonAnimation *soldier ;
 	float setTime;
 	float setTimeCount;
 
 	////-----------------------------shader的各种参数的变量--------------------------
 	/////SHL shader
-	Vec3 SHL = Vec3(243,0.1,0.1);
+	Vec3 SHL;
 	/////light shader
-	float lightHeight = 0;
-	float lightWidth = 0;
-	float lightStart = 0;
-	float lightHeight2 = 0;
-	float lightWidth2 = 0;
-	float lightStart2 = 0;
-	float lightHeight3 = 0;
-	float lightWidth3 = 0;
-	float lightStart3 = 0;
+	float lightHeight;
+	float lightWidth;
+	float lightStart;
+	float lightHeight2;
+	float lightWidth2;
+	float lightStart2;
+	float lightHeight3;
+	float lightWidth3;
+	float lightStart3;
 	/////flash shader
-	float flashFirstWidth = 0;
-	float flashStartHeight = 0;
-	float flashFirstHeight = 0;
+	float flashFirstWidth;
+	float flashStartHeight;
+	float flashFirstHeight;
 	/////vortex shader
-	float vortexRadius = 0;
-	float vortexAngle = 0;
+	float vortexRadius;
+	float vortexAngle;
 	////drawEdge sahder
-	float outLineSize = 0;
-	Vec3 outLineColor = Vec3(0, 0, 0);
-	float circleLightAngle = 0;
+	float outLineSize;
+	Vec3 outLineColor ;
+	float circleLightAngle;
 	////water shader
-	float waterTime = 0;
-	Vec2 waterResolution = Vec2(0, 0);
+	float waterTime;
+	Vec2 waterResolution;
 	////wire shader
-	float wireDurationNum1 = 0;
-	float wireDurationNum2 = 0;
-	float wireDurationNum3 = 0;
-	float startAngle1 = 0;
-	float startAngle2 = 0;
-	float startAngle3 = 0;
-	float wireStartHeight1 = 0;
-	float wireStartHeight2 = 0; 
-	float wireStartHeight3 = 0;
-	float wireHeight1 = 0;
-	float wireHeight2 = 0;
-	float wireHeight3 = 0;
-	float wireSize1 = 0;
-	float wireSize2 = 0;
-	float wireSize3 = 0;
+	float wireDurationNum1;
+	float wireDurationNum2;
+	float wireDurationNum3;
+	float startAngle1;
+	float startAngle2;
+	float startAngle3;
+	float wireStartHeight1;
+	float wireStartHeight2; 
+	float wireStartHeight3;
+	float wireHeight1;
+	float wireHeight2;
+	float wireHeight3;
+	float wireSize1;
+	float wireSize2;
+	float wireSize3;
 	/////godLight shader
-	float u_time = 0;
-	int u_num_sample = 0;   //上帝之光，一个点距离光源点的距离上分为多少份，并叠加这些像素颜色
-	float u_weight = 0;     //叠加的颜色需要乘以一个  比例，不然就会很亮
+	float u_time;
+	int u_num_sample;   //上帝之光，一个点距离光源点的距离上分为多少份，并叠加这些像素颜色
+	float u_weight;     //叠加的颜色需要乘以一个  比例，不然就会很亮
 	/////mask shader
-	float radius = 0;
-	Vec2 center = Vec2(0,0); 
-	Vec4 centerColor = Vec4(0, 0,0,0);
-	Vec4 maskColor = Vec4(0, 0,0,0); 
+	float radius;
+	Vec2 center; 
+	Vec4 centerColor;
+	Vec4 maskColor; 
 
 	GLfloat colorGap[5]; 
 	 
 
 	///
-	float m_rippleDistance = 0;
-	float m_rippleRange = 0;
+	float m_rippleDistance;
+	float m_rippleRange;
 
 	/////////////////////////////////// touch Water data
     std::vector<TouchWaterPoint> touchWaterPointData;  // 触摸数据
 	Rect waterSpriteRect;  
 
-	float waterSpeed = 300;    // 水波的传播速度 px
-	float waterRange = 40;    // 水波的影响范围 px
+	float waterSpeed;    // 水波的传播速度 px
+	float waterRange;    // 水波的影响范围 px
 
-	int maxTouchPointNum = 50;
+	int maxTouchPointNum;
 
-	bool isTouchWater = false;
+	bool isTouchWater;
 	Vec2 nowTouchWaterPos;
-	float touchWaterTimeDelay = 0.1;
-	float touchWaterTimeDelayCount = 0;
+	float touchWaterTimeDelay;
+	float touchWaterTimeDelayCount;
+
+	// randomHide
+	float alpha;
 
 };
 
