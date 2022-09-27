@@ -1,0 +1,13 @@
+body{
+width:90%;
+height:90%;
+background:#333333;
+}
+#Canvas{
+cursor: crosshair;
+margin-left:20px;
+background-color:#434343;
+border-style:solid;
+border-width:2px;
+border-color:#00FFFF;
+}
