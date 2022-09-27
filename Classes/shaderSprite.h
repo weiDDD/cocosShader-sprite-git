@@ -57,8 +57,8 @@ public:
 	void onDraw(const Mat4& transform,uint32_t flags);
 	////
 	////ÉèÖÃshaderÎÄ¼ş
-	std::string vshName = "";
-	std::string fshName = "";
+	std::string vshName;
+	std::string fshName;
 	void setShaderFile(std::string vName, std::string fName){
 		vshName = vName;
 		fshName = fName;

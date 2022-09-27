@@ -3,6 +3,8 @@ USING_NS_CC;
 
 ShaderSprite::ShaderSprite(){
 	texture = nullptr;
+	vshName = "";
+	fshName = "";
 }
 ShaderSprite::~ShaderSprite(){
 	if (texture) {
